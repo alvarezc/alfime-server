@@ -23,7 +23,7 @@ public class UsuarioResource {
     }
 
     @GetMapping("/usuarios/{id}")
-    public Usuario retrieveUsuario(@PathVariable long id) throws UsuarioNotFoundException {
+    public Usuario retrieveUsuario(@PathVariable int id) throws UsuarioNotFoundException {
         Optional<Usuario> usuario = usuarioRepository.findById(id);
 
         if (!usuario.isPresent())
@@ -43,7 +43,7 @@ public class UsuarioResource {
     }
 
     @PutMapping("/usuarios/{id}")
-    public ResponseEntity<Object> updateStudent(@RequestBody Usuario usuario, @PathVariable long id) {
+    public ResponseEntity<Object> updateStudent(@RequestBody Usuario usuario, @PathVariable int id) {
 
         Optional<Usuario> studentOptional = usuarioRepository.findById(id);
 

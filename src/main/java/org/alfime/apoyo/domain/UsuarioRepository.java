@@ -5,6 +5,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@RepositoryRestResource(path = "usuarios")
-public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
+@RepositoryRestResource(collectionResourceRel = "usuarios", path = "usuario")
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 }

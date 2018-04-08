@@ -1,9 +1,9 @@
 package org.alfime.apoyo.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Departamento {
@@ -13,6 +13,10 @@ public class Departamento {
 
     @Column(length = 50)
     private String departamento;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "departamento", fetch = FetchType.LAZY)
+    private List<Ciudad> ciudades;
 
     public Byte getId() {
         return id;
@@ -28,5 +32,13 @@ public class Departamento {
 
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
+    }
+
+    public List<Ciudad> getCiudades() {
+        return ciudades;
+    }
+
+    public void setCiudades(List<Ciudad> ciudades) {
+        this.ciudades = ciudades;
     }
 }

@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class Contacto implements Serializable {
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
 
     @Column
     private Boolean actual;
@@ -27,11 +27,11 @@ public class Contacto implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     private Usuario usuario;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

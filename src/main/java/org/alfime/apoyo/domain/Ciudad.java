@@ -1,5 +1,7 @@
 package org.alfime.apoyo.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -12,7 +14,8 @@ public class Ciudad implements Serializable {
     @Column(nullable = false, length = 50)
     private String ciudad;
 
-    @ManyToOne(targetEntity = Departamento.class, optional = false)
+    @JsonBackReference
+    @ManyToOne
     private Departamento departamento;
 
     public Short getId() {

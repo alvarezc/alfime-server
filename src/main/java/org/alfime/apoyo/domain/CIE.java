@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class CIE {
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false, length = 5)
     private String codigo;
@@ -17,11 +17,11 @@ public class CIE {
     @Column(nullable = false, length = 1000)
     private String enfermedad;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

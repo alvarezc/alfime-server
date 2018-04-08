@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Barrio implements Serializable{
+public class Barrio implements Serializable {
     @Id
     @GeneratedValue
     private Short id;

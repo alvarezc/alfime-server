@@ -1,15 +1,18 @@
 package org.alfime.apoyo.domain;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
 @Entity
-public class Usuario {
+@EntityListeners(AuditingEntityListener.class)
+public class Usuario implements Serializable {
     @Id
     @GeneratedValue
-    private Long id;
+    private Integer id;
 
     @ManyToOne
     private TipoDocumento tipoDocumento;
@@ -21,7 +24,7 @@ public class Usuario {
     @Column(nullable = true, length = 50)
     private String nombre;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = true, length = 50)
     private String segundoNombre;
 
     @Column(nullable = false, length = 50)
@@ -40,11 +43,14 @@ public class Usuario {
     @JoinColumn(name = "usuario_id")
     private Set<Contacto> contactos;
 
-    public Long getId() {
+    @Embedded
+    private Audit audit;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -118,5 +124,13 @@ public class Usuario {
 
     public void setContactos(Set<Contacto> contactos) {
         this.contactos = contactos;
+    }
+
+    public Audit getAudit() {
+        return audit;
+    }
+
+    public void setAudit(Audit audit) {
+        this.audit = audit;
     }
 }

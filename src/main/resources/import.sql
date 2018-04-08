@@ -5941,3 +5941,49 @@ INSERT INTO alfime2.actividad_economica (actividad) VALUES ('Actividades de los 
 INSERT INTO alfime2.actividad_economica (actividad) VALUES ('Actividades no diferenciadas de los hogares individuales como productores de bienes para uso propio.');
 INSERT INTO alfime2.actividad_economica (actividad) VALUES ('Actividades no diferenciadas de los hogares individuales como productores de servicios para uso propio.');
 INSERT INTO alfime2.actividad_economica (actividad) VALUES ('Actividades de organizaciones y entidades extraterritoriales.');
+
+INSERT INTO alfime2.programa (id, nombre) VALUES (1, 'Psicología');
+INSERT INTO alfime2.programa (id, nombre) VALUES (2, 'Fisioterapia');
+INSERT INTO alfime2.programa (id, nombre) VALUES (3, 'Pedagogía');
+INSERT INTO alfime2.programa (id, nombre) VALUES (4, 'Deporte');
+INSERT INTO alfime2.programa (id, nombre) VALUES (5, 'Sociología');
+
+INSERT INTO alfime2.remitente (id, nombre) VALUES (1, 'Privado');
+INSERT INTO alfime2.remitente (id, nombre) VALUES (2, 'Secretaría de Salud');
+
+INSERT INTO alfime2.parentezco (id, nombre) VALUES (1, 'Hermano');
+INSERT INTO alfime2.parentezco (id, nombre) VALUES (2, 'Tío');
+INSERT INTO alfime2.parentezco (id, nombre) VALUES (3, 'Primo');
+INSERT INTO alfime2.parentezco (id, nombre) VALUES (4, 'Abuelo');
+INSERT INTO alfime2.parentezco (id, nombre) VALUES (5, 'Ninguno');
+
+INSERT INTO alfime2.responsabilidad (id, nombre) VALUES (1, 'Ninguna');
+INSERT INTO alfime2.responsabilidad (id, nombre) VALUES (2, 'Responsable');
+INSERT INTO alfime2.responsabilidad (id, nombre) VALUES (3, 'Dependiente');
+
+INSERT INTO alfime2.ocupacion (id, nombre) VALUES (1, 'Docente');
+INSERT INTO alfime2.ocupacion (id, nombre) VALUES (2, 'Terapeuta');
+INSERT INTO alfime2.ocupacion (id, nombre) VALUES (3, 'Operario');
+INSERT INTO alfime2.ocupacion (id, nombre) VALUES (4, 'Independiente');
+
+INSERT INTO alfime2.frecuencia (id, nombre) VALUES (1, 'Semanal');
+INSERT INTO alfime2.frecuencia (id, nombre) VALUES (2, 'Quincenal');
+INSERT INTO alfime2.frecuencia (id, nombre) VALUES (3, 'Mensual');
+INSERT INTO alfime2.frecuencia (id, nombre) VALUES (4, 'Bi-mestral');
+INSERT INTO alfime2.frecuencia (id, nombre) VALUES (5, 'Semestral');
+INSERT INTO alfime2.frecuencia (id, nombre) VALUES (6, 'Anual');
+
+INSERT INTO alfime2.ingreso (id, nombre) VALUES (1, 'Salario');
+INSERT INTO alfime2.ingreso (id, nombre) VALUES (2, 'Pensión');
+INSERT INTO alfime2.ingreso (id, nombre) VALUES (3, 'Subsidio');
+INSERT INTO alfime2.ingreso (id, nombre) VALUES (4, 'Otro');
+
+INSERT INTO alfime2.regimen (id, nombre) VALUES (1, 'Subsidiado');
+INSERT INTO alfime2.regimen (id, nombre) VALUES (2, 'Contributivo');
+INSERT INTO alfime2.regimen (id, nombre) VALUES (3, 'Especial');
+INSERT INTO alfime2.regimen (id, nombre) VALUES (4, 'Vinculado');
+
+INSERT INTO alfime2.discapacidad (id, nombre) VALUES (1, 'Física');
+INSERT INTO alfime2.discapacidad (id, nombre) VALUES (2, 'Cognitiva');
+INSERT INTO alfime2.discapacidad (id, nombre) VALUES (3, 'Sensorial');
+INSERT INTO alfime2.discapacidad (id, nombre) VALUES (4, 'Psíquica');

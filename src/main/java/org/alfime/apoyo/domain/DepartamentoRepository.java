@@ -4,9 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-@RepositoryRestResource(path = "departamentos")
+@RepositoryRestResource(collectionResourceRel = "departamentos", path = "departamento")
 public interface DepartamentoRepository extends JpaRepository<Departamento, Byte> {
 }
