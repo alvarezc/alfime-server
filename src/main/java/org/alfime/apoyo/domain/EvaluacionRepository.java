@@ -9,8 +9,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-@RepositoryRestResource(collectionResourceRel = "usuarios", path = "usuario")
-public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-    @RestResource(path = "documentos", rel = "documentos")
-    List<Usuario> findByDocumento(@Param("documento") String documento);
+@RepositoryRestResource(collectionResourceRel = "evaluaciones", path = "evaluacion")
+public interface EvaluacionRepository extends JpaRepository<Evaluacion, Integer> {
+    @RestResource
+    List<Evaluacion> findByUsuarioId(@Param("id") Integer id);
 }

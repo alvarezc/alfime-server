@@ -5,6 +5,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@RepositoryRestResource(collectionResourceRel = "tipos-documento", path = "tipo-documento")
+@RepositoryRestResource(collectionResourceRel = "tiposDocumento", path = "tipoDocumento")
 public interface TipoDocumentoRepository extends JpaRepository<TipoDocumento, Byte> {
 }

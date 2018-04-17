@@ -6,10 +6,10 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import javax.persistence.MappedSuperclass;
 
-@Embeddable
-public class Audit {
+@MappedSuperclass
+public abstract class Auditable {
     @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate
     private Long createdDate;

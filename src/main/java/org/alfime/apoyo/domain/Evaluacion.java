@@ -9,7 +9,7 @@ import java.util.List;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Evaluacion implements Serializable {
+public class Evaluacion extends Auditable implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
@@ -35,11 +35,91 @@ public class Evaluacion implements Serializable {
     private List<Programa> aspiracion;
 
     @ManyToOne
-    Remitente remitente;
+    private Remitente remitente;
 
     @OneToOne(mappedBy = "evaluacion")
-    EvaluacionFamilia familia;
+    private EvaluacionFamilia familia;
 
-    @Embedded
-    Audit audit;
+    @ManyToOne
+    private Usuario usuario;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public boolean isAceptado() {
+        return aceptado;
+    }
+
+    public void setAceptado(boolean aceptado) {
+        this.aceptado = aceptado;
+    }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
+
+    public String getConclusiones() {
+        return conclusiones;
+    }
+
+    public void setConclusiones(String conclusiones) {
+        this.conclusiones = conclusiones;
+    }
+
+    public List<Programa> getPlan() {
+        return plan;
+    }
+
+    public void setPlan(List<Programa> plan) {
+        this.plan = plan;
+    }
+
+    public List<Programa> getAspiracion() {
+        return aspiracion;
+    }
+
+    public void setAspiracion(List<Programa> aspiracion) {
+        this.aspiracion = aspiracion;
+    }
+
+    public Remitente getRemitente() {
+        return remitente;
+    }
+
+    public void setRemitente(Remitente remitente) {
+        this.remitente = remitente;
+    }
+
+    public EvaluacionFamilia getFamilia() {
+        return familia;
+    }
+
+    public void setFamilia(EvaluacionFamilia familia) {
+        this.familia = familia;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

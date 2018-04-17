@@ -5,11 +5,12 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-public class Usuario implements Serializable {
+public class Usuario extends Auditable implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
@@ -17,11 +18,14 @@ public class Usuario implements Serializable {
     @ManyToOne
     private TipoDocumento tipoDocumento;
 
+    @Column(nullable = false, length = 20)
+    private String documento;
+
     @ManyToOne
     @JoinColumn(name = "ciudad_nacimiento_id")
     private Ciudad ciudad;
 
-    @Column(nullable = true, length = 50)
+    @Column(nullable = false, length = 50)
     private String nombre;
 
     @Column(nullable = true, length = 50)
@@ -43,8 +47,8 @@ public class Usuario implements Serializable {
     @JoinColumn(name = "usuario_id")
     private Set<Contacto> contactos;
 
-    @Embedded
-    private Audit audit;
+    @OneToMany
+    private List<Evaluacion> evaluaciones;
 
     public Integer getId() {
         return id;
@@ -60,6 +64,14 @@ public class Usuario implements Serializable {
 
     public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
 
     public Ciudad getCiudad() {
@@ -126,11 +138,11 @@ public class Usuario implements Serializable {
         this.contactos = contactos;
     }
 
-    public Audit getAudit() {
-        return audit;
+    public List<Evaluacion> getEvaluaciones() {
+        return evaluaciones;
     }
 
-    public void setAudit(Audit audit) {
-        this.audit = audit;
+    public void setEvaluaciones(List<Evaluacion> evaluaciones) {
+        this.evaluaciones = evaluaciones;
     }
 }

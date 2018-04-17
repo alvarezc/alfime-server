@@ -19,4 +19,36 @@ public class EvaluacionMedico implements Serializable {
 
     @ManyToMany
     private List<CifItem> items;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Evaluacion getEvaluacion() {
+        return evaluacion;
+    }
+
+    public void setEvaluacion(Evaluacion evaluacion) {
+        this.evaluacion = evaluacion;
+    }
+
+    public Set<EvaluacionDiscapacidad> getDiscapacidades() {
+        return discapacidades;
+    }
+
+    public void setDiscapacidades(Set<EvaluacionDiscapacidad> discapacidades) {
+        this.discapacidades = discapacidades;
+    }
+
+    public List<CifItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<CifItem> items) {
+        this.items = items;
+    }
 }
