@@ -37,11 +37,23 @@ public class Evaluacion extends Auditable implements Serializable {
     @ManyToOne
     private Remitente remitente;
 
-    @OneToOne(mappedBy = "evaluacion")
+    @OneToOne(mappedBy = "evaluacion", fetch = FetchType.LAZY)
     private EvaluacionFamilia familia;
+
+    @OneToOne(mappedBy = "evaluacion", fetch = FetchType.LAZY)
+    private EvaluacionMedico medico;
+
+    @OneToOne(mappedBy = "evaluacion", fetch = FetchType.LAZY)
+    private EvaluacionOcupacion ocupacion;
+
+    @OneToOne(mappedBy = "evaluacion", fetch = FetchType.LAZY)
+    private EvaluacionSalud salud;
 
     @ManyToOne
     private Usuario usuario;
+
+    @ManyToOne
+    private Asociado evaluador;
 
     public Integer getId() {
         return id;
@@ -115,11 +127,43 @@ public class Evaluacion extends Auditable implements Serializable {
         this.familia = familia;
     }
 
+    public EvaluacionMedico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(EvaluacionMedico medico) {
+        this.medico = medico;
+    }
+
+    public EvaluacionOcupacion getOcupacion() {
+        return ocupacion;
+    }
+
+    public void setOcupacion(EvaluacionOcupacion ocupacion) {
+        this.ocupacion = ocupacion;
+    }
+
+    public EvaluacionSalud getSalud() {
+        return salud;
+    }
+
+    public void setSalud(EvaluacionSalud salud) {
+        this.salud = salud;
+    }
+
     public Usuario getUsuario() {
         return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+
+    public Asociado getEvaluador() {
+        return evaluador;
+    }
+
+    public void setEvaluador(Asociado evaluador) {
+        this.evaluador = evaluador;
     }
 }

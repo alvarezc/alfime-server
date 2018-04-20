@@ -5,6 +5,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@RepositoryRestResource(collectionResourceRel = "remitentes", path = "remitente")
-public interface RemitenteRepository extends JpaRepository<Remitente, Short> {
+@RepositoryRestResource(collectionResourceRel = "asociados", path = "asociado")
+public interface AsociadoRepository extends JpaRepository<Asociado, Long> {
+    Asociado findByUsuario(String usuario);
 }

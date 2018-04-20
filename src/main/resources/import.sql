@@ -5948,14 +5948,14 @@ INSERT INTO alfime2.programa (id, nombre) VALUES (3, 'Pedagogía');
 INSERT INTO alfime2.programa (id, nombre) VALUES (4, 'Deporte');
 INSERT INTO alfime2.programa (id, nombre) VALUES (5, 'Sociología');
 
-INSERT INTO alfime2.remitente (id, nombre) VALUES (1, 'Privado');
-INSERT INTO alfime2.remitente (id, nombre) VALUES (2, 'Secretaría de Salud');
+INSERT INTO alfime2.remitente (id, nombre) VALUES (1, 'Secretaría de Salud');
+INSERT INTO alfime2.remitente (id, nombre) VALUES (2, 'Dr Juan Pérez');
 
-INSERT INTO alfime2.parentezco (id, nombre) VALUES (1, 'Hermano');
-INSERT INTO alfime2.parentezco (id, nombre) VALUES (2, 'Tío');
-INSERT INTO alfime2.parentezco (id, nombre) VALUES (3, 'Primo');
-INSERT INTO alfime2.parentezco (id, nombre) VALUES (4, 'Abuelo');
-INSERT INTO alfime2.parentezco (id, nombre) VALUES (5, 'Ninguno');
+INSERT INTO alfime2.parentesco (id, nombre) VALUES (1, 'Hermano');
+INSERT INTO alfime2.parentesco (id, nombre) VALUES (2, 'Tío');
+INSERT INTO alfime2.parentesco (id, nombre) VALUES (3, 'Primo');
+INSERT INTO alfime2.parentesco (id, nombre) VALUES (4, 'Abuelo');
+INSERT INTO alfime2.parentesco (id, nombre) VALUES (5, 'Ninguno');
 
 INSERT INTO alfime2.responsabilidad (id, nombre) VALUES (1, 'Ninguna');
 INSERT INTO alfime2.responsabilidad (id, nombre) VALUES (2, 'Responsable');
@@ -5987,3 +5987,36 @@ INSERT INTO alfime2.discapacidad (id, nombre) VALUES (1, 'Física');
 INSERT INTO alfime2.discapacidad (id, nombre) VALUES (2, 'Cognitiva');
 INSERT INTO alfime2.discapacidad (id, nombre) VALUES (3, 'Sensorial');
 INSERT INTO alfime2.discapacidad (id, nombre) VALUES (4, 'Psíquica');
+
+INSERT INTO alfime2.familia_tipo (id, nombre) VALUES (1, 'Nuclear');
+INSERT INTO alfime2.familia_tipo (id, nombre) VALUES (2, 'Extensa');
+INSERT INTO alfime2.familia_tipo (id, nombre) VALUES (3, 'Monoparental');
+
+-- Password es "password"
+INSERT INTO alfime2.asociado (id, nombre_completo, password, usuario) VALUES (1, 'Juan Pérez', '{sha256}97cde38028ad898ebc02e690819fa220e88c62e0699403e94fff291cfffaf8410849f27605abcbc0', 'juanito');
+
+INSERT INTO alfime2.rol (id, nombre) VALUES (1, 'Administrator');
+INSERT INTO alfime2.rol (id, nombre) VALUES (2, 'Asistente');
+INSERT INTO alfime2.rol (id, nombre) VALUES (3, 'Psicólogo');
+INSERT INTO alfime2.rol (id, nombre) VALUES (4, 'Fisioterapeuta');
+INSERT INTO alfime2.rol (id, nombre) VALUES (5, 'Sociólogo');
+INSERT INTO alfime2.rol (id, nombre) VALUES (6, 'Pedagogo');
+INSERT INTO alfime2.rol (id, nombre) VALUES (7, 'Deportólogo');
+INSERT INTO alfime2.rol (id, nombre) VALUES (8, 'Evaluador');
+
+INSERT INTO alfime2.asociado_rol (asociado_id, rol_id) VALUES (1, 1);
+INSERT INTO alfime2.asociado_rol (asociado_id, rol_id) VALUES (1, 8);
+
+INSERT INTO alfime2.usuario (id, created_by, created_date, modified_by, modified_date, apellido_materno, apellido_paterno, documento, nacimiento, nombre, segundo_nombre, ciudad_nacimiento_id, genero_id, tipo_documento_id) VALUES (1, 'anonymousUser', 1524240858672, 'anonymousUser', 1524240858672, 'Banana', 'Banana', '123456', '1980-01-01 00:00:00', 'Juanita', '', 47, 1, 2);
+
+INSERT INTO alfime2.evaluacion (id, created_by, created_date, modified_by, modified_date, aceptado, conclusiones, fecha, observaciones, remitente_id, usuario_id) VALUES (1, 'anonymousUser', 1524240858672, 'anonymousUser', 1524240858672, false, '', '2018-04-21 03:34:49', '', 1, 1);
+
+INSERT INTO alfime2.usuario_evaluaciones (usuario_id, evaluaciones_id) VALUES (1, 1);
+
+INSERT INTO alfime2.evaluacion_aspiracion (evaluacion_id, programa_id) VALUES (1, 1);
+INSERT INTO alfime2.evaluacion_aspiracion (evaluacion_id, programa_id) VALUES (1, 2);
+INSERT INTO alfime2.evaluacion_aspiracion (evaluacion_id, programa_id) VALUES (1, 3);
+
+INSERT INTO alfime2.evaluacion_plan (evaluacion_id, programa_id) VALUES (1, 1);
+INSERT INTO alfime2.evaluacion_plan (evaluacion_id, programa_id) VALUES (1, 2);
+INSERT INTO alfime2.evaluacion_plan (evaluacion_id, programa_id) VALUES (1, 3);
