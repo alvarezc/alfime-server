@@ -13,9 +13,6 @@ public class Familia implements Serializable {
     private Evaluacion evaluacion;
 
     @ManyToOne(optional = false)
-    private Usuario usuario;
-
-    @ManyToOne(optional = false)
     private Parentesco parentesco;
 
     @ManyToOne(optional = false)
@@ -23,4 +20,44 @@ public class Familia implements Serializable {
 
     @Column(nullable = false)
     private String nombre;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Evaluacion getEvaluacion() {
+        return evaluacion;
+    }
+
+    public void setEvaluacion(Evaluacion evaluacion) {
+        this.evaluacion = evaluacion;
+    }
+
+    public Parentesco getParentesco() {
+        return parentesco;
+    }
+
+    public void setParentesco(Parentesco parentesco) {
+        this.parentesco = parentesco;
+    }
+
+    public Responsabilidad getResponsabilidad() {
+        return responsabilidad;
+    }
+
+    public void setResponsabilidad(Responsabilidad responsabilidad) {
+        this.responsabilidad = responsabilidad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }

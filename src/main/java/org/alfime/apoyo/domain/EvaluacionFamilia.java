@@ -58,7 +58,7 @@ public class EvaluacionFamilia implements Serializable {
     @Column
     private Boolean actitud6;
 
-    @OneToMany
+    @OneToMany(mappedBy = "evaluacion")
     private List<Familia> miembros;
 
     public Integer getId() {

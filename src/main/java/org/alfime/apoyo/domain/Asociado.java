@@ -1,5 +1,7 @@
 package org.alfime.apoyo.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -16,13 +18,16 @@ public class Asociado {
     private String nombreCompleto;
 
     @Column(length = 100)
+    @JsonIgnore
     private String password;
 
     @Transient
+    @JsonIgnore
     private String passwordConfirm;
 
     @ManyToMany
     @JoinTable(name = "asociado_rol", joinColumns = @JoinColumn(name = "asociado_id"), inverseJoinColumns = @JoinColumn(name = "rol_id"))
+    @JsonIgnore
     private Set<Rol> roles;
 
     public Long getId() {

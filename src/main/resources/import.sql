@@ -6007,7 +6007,7 @@ INSERT INTO alfime2.rol (id, nombre) VALUES (8, 'Evaluador');
 INSERT INTO alfime2.asociado_rol (asociado_id, rol_id) VALUES (1, 1);
 INSERT INTO alfime2.asociado_rol (asociado_id, rol_id) VALUES (1, 8);
 
-INSERT INTO alfime2.usuario (id, created_by, created_date, modified_by, modified_date, apellido_materno, apellido_paterno, documento, nacimiento, nombre, segundo_nombre, ciudad_nacimiento_id, genero_id, tipo_documento_id) VALUES (1, 'anonymousUser', 1524240858672, 'anonymousUser', 1524240858672, 'Banana', 'Banana', '123456', '1980-01-01 00:00:00', 'Juanita', '', 47, 1, 2);
+INSERT INTO alfime2.usuario (id, created_by, created_date, modified_by, modified_date, apellido_materno, apellido_paterno, documento, nacimiento, nombre, segundo_nombre, ciudad_nacimiento_id, genero_id, tipo_documento_id) VALUES (1, 'anonymousUser', 1524240858672, 'anonymousUser', 1524240858672, 'Banana', 'Banana', '123456', '1980-01-01 00:00:00', 'Juanita', '', 47, 2, 2);
 
 INSERT INTO alfime2.evaluacion (id, created_by, created_date, modified_by, modified_date, aceptado, conclusiones, fecha, observaciones, remitente_id, usuario_id) VALUES (1, 'anonymousUser', 1524240858672, 'anonymousUser', 1524240858672, false, '', '2018-04-21 03:34:49', '', 1, 1);
 
@@ -6020,3 +6020,5 @@ INSERT INTO alfime2.evaluacion_aspiracion (evaluacion_id, programa_id) VALUES (1
 INSERT INTO alfime2.evaluacion_plan (evaluacion_id, programa_id) VALUES (1, 1);
 INSERT INTO alfime2.evaluacion_plan (evaluacion_id, programa_id) VALUES (1, 2);
 INSERT INTO alfime2.evaluacion_plan (evaluacion_id, programa_id) VALUES (1, 3);
+
+INSERT INTO alfime2.evaluacion_familia (actitud1, actitud2, actitud3, actitud4, actitud5, actitud6, actividades_recreativas, calidad_relaciones, madre_identificacion, madre_nombre, padre_identificacion, padre_nombre, evaluacion_id, familia_tipo_id, madre_documento_id, padre_documento_id) VALUES (false, false, false, false, false, false, null, null, '234567', 'Juanita Banana', '345678', 'Juanito Banana', 1, 1, 1, 1);
