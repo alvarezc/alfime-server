@@ -6,7 +6,7 @@ import java.io.Serializable;
 @Entity
 public class Barrio implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
     @Column(nullable = false, length = 100)

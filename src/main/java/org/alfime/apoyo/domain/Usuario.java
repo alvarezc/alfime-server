@@ -12,7 +12,7 @@ import java.util.Set;
 @EntityListeners(AuditingEntityListener.class)
 public class Usuario extends Auditable implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne
@@ -47,7 +47,7 @@ public class Usuario extends Auditable implements Serializable {
     @JoinColumn(name = "usuario_id")
     private Set<Contacto> contactos;
 
-    @OneToMany
+    @OneToMany(mappedBy = "usuario")
     private List<Evaluacion> evaluaciones;
 
     public Integer getId() {

@@ -11,7 +11,7 @@ import java.util.List;
 @EntityListeners(AuditingEntityListener.class)
 public class Evaluacion extends Auditable implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false)

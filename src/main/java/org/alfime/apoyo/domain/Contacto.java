@@ -6,7 +6,7 @@ import java.io.Serializable;
 @Entity
 public class Contacto implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column

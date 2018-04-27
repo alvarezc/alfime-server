@@ -8,7 +8,7 @@ import java.util.List;
 @Entity
 public class Departamento {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Byte id;
 
     @Column(length = 50)

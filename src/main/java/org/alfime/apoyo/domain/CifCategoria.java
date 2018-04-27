@@ -6,7 +6,7 @@ import java.io.Serializable;
 @Entity
 public class CifCategoria implements Serializable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Byte id;
 
     @Column(length = 50)

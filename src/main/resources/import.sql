@@ -6011,8 +6011,6 @@ INSERT INTO alfime2.usuario (id, created_by, created_date, modified_by, modified
 
 INSERT INTO alfime2.evaluacion (id, created_by, created_date, modified_by, modified_date, aceptado, conclusiones, fecha, observaciones, remitente_id, usuario_id) VALUES (1, 'anonymousUser', 1524240858672, 'anonymousUser', 1524240858672, false, '', '2018-04-21 03:34:49', '', 1, 1);
 
-INSERT INTO alfime2.usuario_evaluaciones (usuario_id, evaluaciones_id) VALUES (1, 1);
-
 INSERT INTO alfime2.evaluacion_aspiracion (evaluacion_id, programa_id) VALUES (1, 1);
 INSERT INTO alfime2.evaluacion_aspiracion (evaluacion_id, programa_id) VALUES (1, 2);
 INSERT INTO alfime2.evaluacion_aspiracion (evaluacion_id, programa_id) VALUES (1, 3);
