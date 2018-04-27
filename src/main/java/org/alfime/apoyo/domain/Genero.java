@@ -9,7 +9,7 @@ public class Genero {
     private Byte id;
 
     @Column(length = 50)
-    private String genero;
+    private String nombre;
 
     public Byte getId() {
         return id;
@@ -19,11 +19,11 @@ public class Genero {
         this.id = id;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

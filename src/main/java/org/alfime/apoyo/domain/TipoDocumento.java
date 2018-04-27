@@ -9,7 +9,7 @@ public class TipoDocumento {
     private Byte id;
 
     @Column(length = 50)
-    private String tipo;
+    private String nombre;
 
     public Byte getId() {
         return id;
@@ -19,11 +19,11 @@ public class TipoDocumento {
         this.id = id;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

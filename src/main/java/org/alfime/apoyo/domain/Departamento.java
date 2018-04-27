@@ -11,8 +11,8 @@ public class Departamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Byte id;
 
-    @Column(length = 50)
-    private String departamento;
+    @Column(length = 50, name = "departamento")
+    private String nombre;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "departamento", fetch = FetchType.LAZY)
@@ -26,12 +26,12 @@ public class Departamento {
         this.id = id;
     }
 
-    public String getDepartamento() {
-        return departamento;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public List<Ciudad> getCiudades() {

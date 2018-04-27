@@ -9,7 +9,7 @@ public class Escolaridad {
     private Byte id;
 
     @Column(nullable = false, length = 30)
-    private String escolaridad;
+    private String nombre;
 
     public Byte getId() {
         return id;
@@ -19,11 +19,11 @@ public class Escolaridad {
         this.id = id;
     }
 
-    public String getEscolaridad() {
-        return escolaridad;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setEscolaridad(String escolaridad) {
-        this.escolaridad = escolaridad;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

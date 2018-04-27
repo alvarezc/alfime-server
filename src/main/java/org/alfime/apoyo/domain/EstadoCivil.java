@@ -9,7 +9,7 @@ public class EstadoCivil {
     private Byte id;
 
     @Column(nullable = false, length = 30)
-    private String estadoCivil;
+    private String nombre;
 
     public Byte getId() {
         return id;
@@ -19,11 +19,11 @@ public class EstadoCivil {
         this.id = id;
     }
 
-    public String getEstadoCivil() {
-        return estadoCivil;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setEstadoCivil(String estadoCivil) {
-        this.estadoCivil = estadoCivil;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 }

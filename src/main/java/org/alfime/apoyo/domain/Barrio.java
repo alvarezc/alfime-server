@@ -9,8 +9,8 @@ public class Barrio implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
-    @Column(nullable = false, length = 100)
-    private String barrio;
+    @Column(nullable = false, name = "barrio", length = 100)
+    private String nombre;
 
     @ManyToOne
     @JoinColumn(name = "ciudad_id")
@@ -24,12 +24,12 @@ public class Barrio implements Serializable {
         this.id = id;
     }
 
-    public String getBarrio() {
-        return barrio;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setBarrio(String barrio) {
-        this.barrio = barrio;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Ciudad getCiudad() {

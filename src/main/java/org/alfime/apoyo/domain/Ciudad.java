@@ -11,8 +11,8 @@ public class Ciudad implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
-    @Column(nullable = false, length = 50)
-    private String ciudad;
+    @Column(nullable = false, name = "ciudad", length = 50)
+    private String nombre;
 
     @JsonBackReference
     @ManyToOne
@@ -26,12 +26,12 @@ public class Ciudad implements Serializable {
         this.id = id;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Departamento getDepartamento() {
