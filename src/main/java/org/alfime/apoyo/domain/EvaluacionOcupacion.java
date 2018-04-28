@@ -34,7 +34,7 @@ public class EvaluacionOcupacion implements Serializable {
     @Column(columnDefinition = "text")
     private String actividadesTiempoLibre;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pk.evaluacion")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "evaluacion")
     private Set<EvaluacionIngreso> ingresos;
 
     public Integer getId() {

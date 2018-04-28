@@ -4,13 +4,17 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@AssociationOverrides({
-        @AssociationOverride(name = "pk.evaluacion", joinColumns = @JoinColumn(name = "evaluacion_id")),
-        @AssociationOverride(name = "pk.ingreso", joinColumns = @JoinColumn(name = "ingreso_id"))
-})
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"evaluacion_id", "ingreso_id"})})
 public class EvaluacionIngreso implements Serializable {
-    @EmbeddedId
-    private EvaluacionIngresoPK pk = new EvaluacionIngresoPK();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @ManyToOne
+    private Evaluacion evaluacion;
+
+    @ManyToOne
+    private Ingreso ingreso;
 
     @Column
     private Double monto;
@@ -18,12 +22,28 @@ public class EvaluacionIngreso implements Serializable {
     @ManyToOne
     private Frecuencia frecuencia;
 
-    public EvaluacionIngresoPK getPk() {
-        return pk;
+    public Integer getId() {
+        return id;
     }
 
-    public void setPk(EvaluacionIngresoPK pk) {
-        this.pk = pk;
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Evaluacion getEvaluacion() {
+        return evaluacion;
+    }
+
+    public void setEvaluacion(Evaluacion evaluacion) {
+        this.evaluacion = evaluacion;
+    }
+
+    public Ingreso getIngreso() {
+        return ingreso;
+    }
+
+    public void setIngreso(Ingreso ingreso) {
+        this.ingreso = ingreso;
     }
 
     public Double getMonto() {
