@@ -17,7 +17,7 @@ public class EvaluacionIngreso implements Serializable {
     private Ingreso ingreso;
 
     @Column
-    private Double monto;
+    private Long monto;
 
     @ManyToOne
     private Frecuencia frecuencia;
@@ -46,11 +46,11 @@ public class EvaluacionIngreso implements Serializable {
         this.ingreso = ingreso;
     }
 
-    public Double getMonto() {
+    public Long getMonto() {
         return monto;
     }
 
-    public void setMonto(Double monto) {
+    public void setMonto(Long monto) {
         this.monto = monto;
     }
 
