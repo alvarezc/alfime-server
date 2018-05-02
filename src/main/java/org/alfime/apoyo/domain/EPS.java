@@ -9,7 +9,7 @@ public class EPS implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
-    @Column(length = 50)
+    @Column(length = 100)
     private String nombre;
 
     @Column

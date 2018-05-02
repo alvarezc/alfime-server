@@ -11,7 +11,7 @@ public interface EvaluacionIngresoCompleto {
 
     Ingreso getIngreso();
 
-    Double getMonto();
+    Long getMonto();
 
     Frecuencia getFrecuencia();
 }
