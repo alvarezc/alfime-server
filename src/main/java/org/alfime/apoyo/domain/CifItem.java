@@ -9,6 +9,9 @@ public class CifItem implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
+    @Column(length = 5)
+    private String codigo;
+
     @Column(length = 50)
     private String nombre;
 
@@ -21,6 +24,14 @@ public class CifItem implements Serializable {
 
     public void setId(Short id) {
         this.id = id;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getNombre() {

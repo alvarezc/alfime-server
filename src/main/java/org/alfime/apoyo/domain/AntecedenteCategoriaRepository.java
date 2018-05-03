@@ -5,6 +5,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@RepositoryRestResource(collectionResourceRel = "cifComponentes",path = "cifComponente")
-public interface CifComponenteRepository extends JpaRepository<CifComponente, Byte> {
+@RepositoryRestResource(collectionResourceRel = "antecedenteCategorias", path = "antecedenteCategoria")
+public interface AntecedenteCategoriaRepository extends JpaRepository<AntecedenteCategoria, Byte> {
 }
