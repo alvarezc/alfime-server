@@ -1,6 +1,7 @@
 package org.alfime.apoyo.domain.projection;
 
-import org.alfime.apoyo.domain.*;
+import org.alfime.apoyo.domain.Discapacidad;
+import org.alfime.apoyo.domain.EvaluacionDiscapacidad;
 import org.springframework.data.rest.core.config.Projection;
 
 import java.util.Date;

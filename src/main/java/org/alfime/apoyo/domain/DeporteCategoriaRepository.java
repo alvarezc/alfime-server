@@ -5,6 +5,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
-@RepositoryRestResource(collectionResourceRel="deporteCategorias", path = "deporteCategoria")
+@RepositoryRestResource(collectionResourceRel = "deporteCategorias", path = "deporteCategoria")
 public interface DeporteCategoriaRepository extends JpaRepository<DeporteCategoria, Byte> {
 }

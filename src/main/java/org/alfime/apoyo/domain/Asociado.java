@@ -9,7 +9,7 @@ import java.util.Set;
 public class Asociado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Short id;
 
     @Column(length = 20)
     private String usuario;
@@ -30,11 +30,11 @@ public class Asociado {
     @JsonIgnore
     private Set<Rol> roles;
 
-    public Long getId() {
+    public Short getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Short id) {
         this.id = id;
     }
 

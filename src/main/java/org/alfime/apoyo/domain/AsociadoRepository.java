@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @RepositoryRestResource(collectionResourceRel = "asociados", path = "asociado")
-public interface AsociadoRepository extends JpaRepository<Asociado, Long> {
+public interface AsociadoRepository extends JpaRepository<Asociado, Short> {
     Asociado findByUsuario(String usuario);
 }
