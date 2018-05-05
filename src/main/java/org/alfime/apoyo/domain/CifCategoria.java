@@ -2,6 +2,7 @@ package org.alfime.apoyo.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class CifCategoria implements Serializable {
@@ -14,6 +15,9 @@ public class CifCategoria implements Serializable {
 
     @ManyToOne
     private CifComponente componente;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<CifItem> items;
 
     public Byte getId() {
         return id;
@@ -37,5 +41,13 @@ public class CifCategoria implements Serializable {
 
     public void setComponente(CifComponente componente) {
         this.componente = componente;
+    }
+
+    public List<CifItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<CifItem> items) {
+        this.items = items;
     }
 }

@@ -1,11 +1,9 @@
 package org.alfime.apoyo.domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.List;
 
 @Entity
-public class CifComponente implements Serializable {
+public class DeporteActividad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Byte id;
@@ -13,8 +11,7 @@ public class CifComponente implements Serializable {
     @Column(length = 50)
     private String nombre;
 
-    @OneToMany(mappedBy = "componente")
-    private List<CifCategoria> categorias;
+    private Deporte deporte;
 
     public Byte getId() {
         return id;
@@ -32,11 +29,11 @@ public class CifComponente implements Serializable {
         this.nombre = nombre;
     }
 
-    public List<CifCategoria> getCategorias() {
-        return categorias;
+    public Deporte getDeporte() {
+        return deporte;
     }
 
-    public void setCategorias(List<CifCategoria> categorias) {
-        this.categorias = categorias;
+    public void setDeporte(Deporte deporte) {
+        this.deporte = deporte;
     }
 }

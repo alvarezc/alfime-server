@@ -14,7 +14,7 @@ public class EvaluacionMedico implements Serializable {
     @MapsId
     private Evaluacion evaluacion;
 
-    @OneToMany(mappedBy = "pk.evaluacion")
+    @OneToMany(mappedBy = "evaluacion")
     private Set<EvaluacionDiscapacidad> discapacidades;
 
     @ManyToMany
