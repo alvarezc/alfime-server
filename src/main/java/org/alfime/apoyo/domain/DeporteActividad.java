@@ -11,6 +11,7 @@ public class DeporteActividad {
     @Column(length = 50)
     private String nombre;
 
+    @ManyToOne
     private Deporte deporte;
 
     public Byte getId() {

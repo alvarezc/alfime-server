@@ -12,6 +12,7 @@ public class AntecedenteCategoria implements Serializable {
     @Column(length = 20)
     private String nombre;
 
+    @ManyToOne
     private Antecedente antecedente;
 
     public Byte getId() {

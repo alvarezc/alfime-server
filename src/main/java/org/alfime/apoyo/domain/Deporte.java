@@ -2,6 +2,7 @@ package org.alfime.apoyo.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Deporte implements Serializable {
@@ -12,8 +13,8 @@ public class Deporte implements Serializable {
     @Column(length = 50)
     private String nombre;
 
-    @ManyToOne
-    private DeporteCategoria categoria;
+    @OneToMany(mappedBy = "deporte")
+    private List<DeporteCategoria> categorias;
 
     public Byte getId() {
         return id;
@@ -31,11 +32,11 @@ public class Deporte implements Serializable {
         this.nombre = nombre;
     }
 
-    public DeporteCategoria getCategoria() {
-        return categoria;
+    public List<DeporteCategoria> getCategorias() {
+        return categorias;
     }
 
-    public void setCategoria(DeporteCategoria categoria) {
-        this.categoria = categoria;
+    public void setCategorias(List<DeporteCategoria> categorias) {
+        this.categorias = categorias;
     }
 }
