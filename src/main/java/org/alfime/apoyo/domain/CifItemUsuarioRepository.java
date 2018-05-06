@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 @RepositoryRestResource(collectionResourceRel = "cifItemUsuarios", path = "cifItemUsuario")
 public interface CifItemUsuarioRepository extends JpaRepository<CifItemUsuario, Long> {
-    List<CifItemUsuario> findAllByUsuarioIdAndItemCategoriaComponenteId(Integer usuarioId, Byte componenteId);
+    List<CifItemUsuario> findAllByUsuarioIdAndItemCategoriaId(Integer usuarioId, Byte componenteId);
 }

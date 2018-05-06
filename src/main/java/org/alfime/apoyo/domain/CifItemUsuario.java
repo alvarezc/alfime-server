@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(uniqueConstraints = {@UniqueConstraint(columnNames = {"item_id", "usuario_id"})})
 public class CifItemUsuario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
