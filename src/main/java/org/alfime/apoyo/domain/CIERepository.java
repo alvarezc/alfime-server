@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 @RepositoryRestResource(collectionResourceRel = "CIEs", path = "CIE")
-public interface CIERepository extends JpaRepository<CIE, Short> {
+public interface CIERepository extends JpaRepository<CIE, Integer> {
     Page<CIE> findByEnfermedadContains(String enfermedad, Pageable pageable);
 }
