@@ -17,9 +17,6 @@ public class EvaluacionMedico implements Serializable {
     @OneToMany(mappedBy = "evaluacion")
     private Set<EvaluacionDiscapacidad> discapacidades;
 
-    @ManyToMany
-    private List<CifItem> items;
-
     public Integer getId() {
         return id;
     }
@@ -42,13 +39,5 @@ public class EvaluacionMedico implements Serializable {
 
     public void setDiscapacidades(Set<EvaluacionDiscapacidad> discapacidades) {
         this.discapacidades = discapacidades;
-    }
-
-    public List<CifItem> getItems() {
-        return items;
-    }
-
-    public void setItems(List<CifItem> items) {
-        this.items = items;
     }
 }

@@ -6591,19 +6591,26 @@ INSERT INTO alfime2.cif_item (id, codigo, nombre, categoria_id) VALUES (407, nul
 INSERT INTO alfime2.cif_item (id, codigo, nombre, categoria_id) VALUES (408, null, 'Otras especificdads', 38);
 INSERT INTO alfime2.cif_item (id, codigo, nombre, categoria_id) VALUES (409, null, 'Otras no especificdads', 38);
 
-INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (1, '0', false, 'No hay barrera');
-INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (2, '1', false, 'Barrera ligera');
-INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (3, '2', false, 'Barrera moderada');
-INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (4, '3', false, 'Barrera grave');
-INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (5, '4', false, 'Barrera completa');
-INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (6, '8', false, 'Barrera sin especificar');
-INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (7, '9', false, 'No aplicable');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (1, '0', true, 'No hay barrera');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (2, '1', true, 'Barrera ligera');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (3, '2', true, 'Barrera moderada');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (4, '3', true, 'Barrera grave');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (5, '4', true, 'Barrera completa');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (6, '8', true, 'Barrera sin especificar');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (7, '9', true, 'No aplicable');
 INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (8, '0+', true, 'No hay facilitador');
 INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (9, '1+', true, 'Facilitador ligero');
 INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (10, '2+', true, 'Facilitador moderado');
 INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (11, '3+', true, 'Facilitador grave');
 INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (12, '4+', true, 'Facilitador completo');
 INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (13, '8+', true, 'Facilitador sin especificar');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (14, '0', false, 'No hay deficiencia');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (15, '1', false, 'Deficiencia ligera');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (16, '2', false, 'Deficiencia moderada');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (17, '3', false, 'Deficiencia grave');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (18, '4', false, 'Deficiencia completa');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (19, '8', false, 'Deficiencia sin especificar');
+INSERT INTO alfime2.cif_calificador (id, codigo, facilitador, nombre) VALUES (20, '9', false, 'No aplicable');
 
 INSERT INTO alfime2.deporte (id, nombre) VALUES (1, 'Natación');
 INSERT INTO alfime2.deporte (id, nombre) VALUES (2, 'Atletismo');
