@@ -6808,6 +6808,17 @@ INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (11, 'Cemento
 INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (12, 'Tierra', 3);
 INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (13, 'Madera', 3);
 
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (1, 'Refrigerador');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (2, 'Lavadora');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (3, 'Televisor');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (4, 'Cable ó Parabólica');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (5, 'Calentador ó Ducha Eléctrica');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (6, 'Horno de Microondas');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (7, 'Aire Acondicionado');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (8, 'Computador');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (9, 'Equipo de Sonido');
+INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (10, 'Vehiculo Automotor');
+
 -- Password es "password"
 INSERT INTO alfime2.asociado (id, nombre_completo, password, usuario) VALUES (1, 'Juan Pérez', '{sha256}97cde38028ad898ebc02e690819fa220e88c62e0699403e94fff291cfffaf8410849f27605abcbc0', 'juanito');
 
