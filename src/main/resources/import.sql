@@ -6790,6 +6790,24 @@ INSERT INTO alfime2.deporte_actividad (id, nombre) VALUES (3, 'Ejercicios dismin
 INSERT INTO alfime2.deporte_actividad (id, nombre) VALUES (4, 'Volumen de trabajo e intensidad altos, predisposic');
 INSERT INTO alfime2.deporte_actividad (id, nombre) VALUES (5, 'Predisposición a la dura exigencia de la competenc');
 
+INSERT INTO alfime2.vivienda_tipo (id, nombre) VALUES (1, 'Casa');
+INSERT INTO alfime2.vivienda_tipo (id, nombre) VALUES (2, 'Apartamento');
+INSERT INTO alfime2.vivienda_tipo (id, nombre) VALUES (3, 'Habitación');
+
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (1, 'Tapia', 1);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (2, 'Madera', 1);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (3, 'Cartón', 1);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (4, 'Material', 1);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (5, 'Otra', 1);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (6, 'Concreto', 2);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (7, 'Teja de Barro', 2);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (8, 'Cartón', 2);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (9, 'Lámina de Zinc', 2);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (10, 'Cerámica', 3);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (11, 'Cemento', 3);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (12, 'Tierra', 3);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (13, 'Madera', 3);
+
 -- Password es "password"
 INSERT INTO alfime2.asociado (id, nombre_completo, password, usuario) VALUES (1, 'Juan Pérez', '{sha256}97cde38028ad898ebc02e690819fa220e88c62e0699403e94fff291cfffaf8410849f27605abcbc0', 'juanito');
 
