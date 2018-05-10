@@ -37,6 +37,27 @@ public class EvaluacionOcupacion implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "evaluacion")
     private Set<EvaluacionIngreso> ingresos;
 
+    @Column(columnDefinition = "text")
+    private String tareas;
+
+    @Column(columnDefinition = "text")
+    private String expectativas;
+
+    @Column(columnDefinition = "text")
+    private String aspiraciones;
+
+    @Column
+    private Boolean actitud1;
+
+    @Column
+    private Boolean actitud2;
+
+    @Column
+    private Boolean actitud3;
+
+    @Column
+    private Boolean actitud4;
+
     public Integer getId() {
         return id;
     }
@@ -115,5 +136,61 @@ public class EvaluacionOcupacion implements Serializable {
 
     public void setIngresos(Set<EvaluacionIngreso> ingresos) {
         this.ingresos = ingresos;
+    }
+
+    public String getTareas() {
+        return tareas;
+    }
+
+    public void setTareas(String tareas) {
+        this.tareas = tareas;
+    }
+
+    public String getExpectativas() {
+        return expectativas;
+    }
+
+    public void setExpectativas(String expectativas) {
+        this.expectativas = expectativas;
+    }
+
+    public String getAspiraciones() {
+        return aspiraciones;
+    }
+
+    public void setAspiraciones(String aspiraciones) {
+        this.aspiraciones = aspiraciones;
+    }
+
+    public Boolean getActitud1() {
+        return actitud1;
+    }
+
+    public void setActitud1(Boolean actitud1) {
+        this.actitud1 = actitud1;
+    }
+
+    public Boolean getActitud2() {
+        return actitud2;
+    }
+
+    public void setActitud2(Boolean actitud2) {
+        this.actitud2 = actitud2;
+    }
+
+    public Boolean getActitud3() {
+        return actitud3;
+    }
+
+    public void setActitud3(Boolean actitud3) {
+        this.actitud3 = actitud3;
+    }
+
+    public Boolean getActitud4() {
+        return actitud4;
+    }
+
+    public void setActitud4(Boolean actitud4) {
+        this.actitud4 = actitud4;
     }
 }
