@@ -13,7 +13,7 @@ public class AgendaCategoria implements Serializable {
     @Column(nullable = false, length = 50)
     private String nombre;
 
-    @OneToMany(mappedBy = "evento")
+    @OneToMany(mappedBy = "categoria")
     private List<AgendaEvento> eventos;
 
     public Byte getId() {
