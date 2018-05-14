@@ -1,16 +1,22 @@
 package org.alfime.apoyo.domain;
 
-import java.io.Serializable;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class SeccionData implements Serializable {
+@EntityListeners(AuditingEntityListener.class)
+public class SeccionData extends Auditable implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
 
-    @Column(columnDefinition="text")
+    @Column(columnDefinition = "text")
     private String contenido;
+
+    @ManyToOne
+    private Usuario usuario;
 
     @ManyToOne
     private Seccion seccion;
@@ -28,6 +34,14 @@ public class SeccionData implements Serializable {
 
     public String getContenido() {
         return contenido;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public void setContenido(String contenido) {
