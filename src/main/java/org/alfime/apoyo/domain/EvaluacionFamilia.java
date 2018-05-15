@@ -64,6 +64,9 @@ public class EvaluacionFamilia implements Serializable {
     @ManyToOne
     private EstadoCivil estadoCivil;
 
+    @ManyToOne
+    private Religion religion;
+
     public Integer getId() {
         return id;
     }
@@ -214,5 +217,13 @@ public class EvaluacionFamilia implements Serializable {
 
     public void setEstadoCivil(EstadoCivil estadoCivil) {
         this.estadoCivil = estadoCivil;
+    }
+
+    public Religion getReligion() {
+        return religion;
+    }
+
+    public void setReligion(Religion religion) {
+        this.religion = religion;
     }
 }

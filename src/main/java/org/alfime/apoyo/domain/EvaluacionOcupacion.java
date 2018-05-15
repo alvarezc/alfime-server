@@ -19,8 +19,8 @@ public class EvaluacionOcupacion implements Serializable {
     @ManyToOne
     private Escolaridad escolaridad;
 
-    @Column(length = 100)
-    private String actividadEconomica;
+    @ManyToOne
+    private ActividadEconomica actividadEconomica;
 
     @Column(length = 100)
     private String empresa;
@@ -90,11 +90,11 @@ public class EvaluacionOcupacion implements Serializable {
         this.escolaridad = escolaridad;
     }
 
-    public String getActividadEconomica() {
+    public ActividadEconomica getActividadEconomica() {
         return actividadEconomica;
     }
 
-    public void setActividadEconomica(String actividadEconomica) {
+    public void setActividadEconomica(ActividadEconomica actividadEconomica) {
         this.actividadEconomica = actividadEconomica;
     }
 
