@@ -10,6 +10,9 @@ public class UsuarioAntecedente implements Serializable {
     private Integer id;
 
     @ManyToOne
+    private Usuario usuario;
+
+    @ManyToOne
     private Antecedente antecedente;
 
     @Column(columnDefinition = "text")
@@ -21,6 +24,14 @@ public class UsuarioAntecedente implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public Antecedente getAntecedente() {
