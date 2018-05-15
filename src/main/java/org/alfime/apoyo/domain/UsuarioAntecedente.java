@@ -4,39 +4,38 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class AntecedenteCategoria implements Serializable {
+public class UsuarioAntecedente implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Byte id;
-
-    @Column(length = 20)
-    private String nombre;
+    private Integer id;
 
     @ManyToOne
     private Antecedente antecedente;
 
-    public Byte getId() {
+    @Column(columnDefinition = "text")
+    private String descripcion;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Byte id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    @ManyToOne
     public Antecedente getAntecedente() {
         return antecedente;
     }
 
     public void setAntecedente(Antecedente antecedente) {
         this.antecedente = antecedente;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }

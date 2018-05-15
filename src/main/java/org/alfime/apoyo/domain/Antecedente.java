@@ -13,9 +13,6 @@ public class Antecedente implements Serializable {
     @Column(length = 20)
     private String nombre;
 
-    @OneToMany(mappedBy = "antecedente")
-    private List<AntecedenteCategoria> categorias;
-
     public Byte getId() {
         return id;
     }
@@ -30,13 +27,5 @@ public class Antecedente implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public List<AntecedenteCategoria> getCategorias() {
-        return categorias;
-    }
-
-    public void setCategorias(List<AntecedenteCategoria> categorias) {
-        this.categorias = categorias;
     }
 }
