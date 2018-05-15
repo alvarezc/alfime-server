@@ -61,6 +61,9 @@ public class EvaluacionFamilia implements Serializable {
     @OneToMany(mappedBy = "evaluacion")
     private List<Familia> miembros;
 
+    @ManyToOne
+    private EstadoCivil estadoCivil;
+
     public Integer getId() {
         return id;
     }
@@ -203,5 +206,13 @@ public class EvaluacionFamilia implements Serializable {
 
     public void setMiembros(List<Familia> miembros) {
         this.miembros = miembros;
+    }
+
+    public EstadoCivil getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(EstadoCivil estadoCivil) {
+        this.estadoCivil = estadoCivil;
     }
 }
