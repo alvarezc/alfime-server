@@ -6807,6 +6807,9 @@ INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (10, 'Cerámi
 INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (11, 'Cemento', 3);
 INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (12, 'Tierra', 3);
 INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (13, 'Madera', 3);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (14, 'Propia', 4);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (15, 'Arrendada', 4);
+INSERT INTO alfime2.vivienda_material (id, nombre, seccion) VALUES (16, 'Otro', 4);
 
 INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (1, 'Refrigerador');
 INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (2, 'Lavadora');

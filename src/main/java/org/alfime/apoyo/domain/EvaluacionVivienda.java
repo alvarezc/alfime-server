@@ -23,13 +23,13 @@ public class EvaluacionVivienda implements Serializable {
     private Byte dormitorios;
 
     @ManyToOne
-    ViviendaMaterial pared;
+    private ViviendaMaterial pared;
 
     @ManyToOne
-    ViviendaMaterial techo;
+    private ViviendaMaterial techo;
 
     @ManyToOne
-    ViviendaMaterial piso;
+    private ViviendaMaterial piso;
 
     @OneToMany(mappedBy = "evaluacion")
     private List<EvaluacionViviendaAccesibilidad> accesibilidad;
@@ -37,6 +37,12 @@ public class EvaluacionVivienda implements Serializable {
     @ManyToMany
     @JoinTable(joinColumns = {@JoinColumn(name = "evaluacion_id")}, inverseJoinColumns = {@JoinColumn(name = "mobiliario_id")})
     private List<ViviendaMobiliario> mobiliario;
+
+    @Column
+    private ViviendaMaterial calidad;
+
+    @Column(length = 50)
+    private String calidadOtro;
 
     public Integer getId() {
         return id;
@@ -116,5 +122,21 @@ public class EvaluacionVivienda implements Serializable {
 
     public void setMobiliario(List<ViviendaMobiliario> mobiliario) {
         this.mobiliario = mobiliario;
+    }
+
+    public ViviendaMaterial getCalidad() {
+        return calidad;
+    }
+
+    public void setCalidad(ViviendaMaterial calidad) {
+        this.calidad = calidad;
+    }
+
+    public String getCalidadOtro() {
+        return calidadOtro;
+    }
+
+    public void setCalidadOtro(String calidadOtro) {
+        this.calidadOtro = calidadOtro;
     }
 }
