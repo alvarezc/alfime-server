@@ -38,7 +38,7 @@ public class EvaluacionVivienda implements Serializable {
     @JoinTable(joinColumns = {@JoinColumn(name = "evaluacion_id")}, inverseJoinColumns = {@JoinColumn(name = "mobiliario_id")})
     private List<ViviendaMobiliario> mobiliario;
 
-    @Column
+    @ManyToOne
     private ViviendaMaterial calidad;
 
     @Column(length = 50)
