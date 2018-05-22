@@ -15,13 +15,13 @@ public class SeccionData extends Auditable implements Serializable {
     @Column(columnDefinition = "text")
     private String contenido;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     private Usuario usuario;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     private Seccion seccion;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     private SeccionTipo tipo;
 
     public Long getId() {
