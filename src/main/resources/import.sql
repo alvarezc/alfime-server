@@ -6822,6 +6822,15 @@ INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (8, 'Computador');
 INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (9, 'Equipo de Sonido');
 INSERT INTO alfime2.vivienda_mobiliario (id, nombre) VALUES (10, 'Vehiculo Automotor');
 
+INSERT INTO alfime2.seccion (id, nombre) VALUES (1, 'Aula');
+INSERT INTO alfime2.seccion (id, nombre) VALUES (2, 'Deportes');
+INSERT INTO alfime2.seccion (id, nombre) VALUES (3, 'Fisioterapia');
+INSERT INTO alfime2.seccion (id, nombre) VALUES (4, 'Laboral');
+INSERT INTO alfime2.seccion (id, nombre) VALUES (5, 'Psicología');
+
+INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (1, 'Plan');
+INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (2, 'Informe');
+
 -- Password es "password"
 INSERT INTO alfime2.asociado (id, nombre_completo, password, usuario) VALUES (1, 'Juan Pérez', '{sha256}97cde38028ad898ebc02e690819fa220e88c62e0699403e94fff291cfffaf8410849f27605abcbc0', 'juanito');
 

@@ -25,4 +25,8 @@ public interface EvaluacionViviendaCompleto {
     ViviendaMaterial getTecho();
 
     List<ViviendaMobiliario> getMobiliario();
+
+    ViviendaMaterial getCalidad();
+
+    String getCalidadOtro();
 }
