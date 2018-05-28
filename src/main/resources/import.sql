@@ -6133,14 +6133,12 @@ INSERT INTO alfime2.antecedente (id, nombre) VALUES (5, 'Alergias');
 INSERT INTO alfime2.antecedente (id, nombre) VALUES (6, 'Sociales y personales');
 INSERT INTO alfime2.antecedente (id, nombre) VALUES (7, 'Familiares');
 INSERT INTO alfime2.antecedente (id, nombre) VALUES (8, 'Inmunizaciones');
-INSERT INTO alfime2.antecedente (id, nombre) VALUES (7, 'Familiares');
-INSERT INTO alfime2.antecedente (id, nombre) VALUES (8, 'Inmunizaciones');
 
-INSERT INTO alfime2.cif_componente (id, nombre) VALUES (1, 'funciones corporales');
-INSERT INTO alfime2.cif_componente (id, nombre) VALUES (2, 'estructuras corporales');
-INSERT INTO alfime2.cif_componente (id, nombre) VALUES (3, 'actividades');
-INSERT INTO alfime2.cif_componente (id, nombre) VALUES (4, 'participacion');
-INSERT INTO alfime2.cif_componente (id, nombre) VALUES (5, 'factores ambientales');
+INSERT INTO alfime2.cif_componente (id, nombre) VALUES (1, 'Funciones Corporales');
+INSERT INTO alfime2.cif_componente (id, nombre) VALUES (2, 'Estructuras Corporales');
+INSERT INTO alfime2.cif_componente (id, nombre) VALUES (3, 'Actividades');
+INSERT INTO alfime2.cif_componente (id, nombre) VALUES (4, 'Participacion');
+INSERT INTO alfime2.cif_componente (id, nombre) VALUES (5, 'Factores Ambientales');
 
 INSERT INTO alfime2.cif_categoria (id, nombre, componente_id) VALUES (3, 'Voz y habla', 1);
 INSERT INTO alfime2.cif_categoria (id, nombre, componente_id) VALUES (5, 'Sist. digest., metabolico y enaocrin', 1);
@@ -6830,6 +6828,7 @@ INSERT INTO alfime2.seccion (id, nombre) VALUES (5, 'Psicología');
 
 INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (1, 'Plan');
 INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (2, 'Informe');
+INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (3, 'Seguimiento');
 
 -- Password es "password"
 INSERT INTO alfime2.asociado (id, nombre_completo, password, usuario) VALUES (1, 'Juan Pérez', '{sha256}97cde38028ad898ebc02e690819fa220e88c62e0699403e94fff291cfffaf8410849f27605abcbc0', 'juanito');
