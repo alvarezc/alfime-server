@@ -2,7 +2,6 @@ package org.alfime.apoyo.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 public class Antecedente implements Serializable {
@@ -10,7 +9,7 @@ public class Antecedente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Byte id;
 
-    @Column(length = 20)
+    @Column(length = 30)
     private String nombre;
 
     public Byte getId() {

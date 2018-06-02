@@ -6063,6 +6063,7 @@ INSERT INTO alfime2.eps (id, activa, nombre) VALUES (63, true, 'ECOOPSOS EMPRES 
 INSERT INTO alfime2.eps (id, activa, nombre) VALUES (64, true, 'ASOCIACIÓN MUTUAL EMPRESA SOLIDARIA DE SALUD EMSSANAR ESS');
 INSERT INTO alfime2.eps (id, activa, nombre) VALUES (65, true, 'ESS COMPARTA');
 INSERT INTO alfime2.eps (id, activa, nombre) VALUES (66, true, 'ASOCIACIÓN MUTUAL SER EMPRESA SOLIDARIA DE SALUD ESS');
+INSERT INTO alfime2.eps (id, activa, nombre) VALUES (67, true, 'SURA');
 
 INSERT INTO alfime2.pension (id, nombre) VALUES (1, 'SSS ADMINISTRADORA DE FONDOS DE PENSIONES Y CESANTIAS PORVENIR S.A.');
 INSERT INTO alfime2.pension (id, nombre) VALUES (2, 'SSS INSTITUTO DE SEGUROS SOCIALES');
@@ -6827,8 +6828,7 @@ INSERT INTO alfime2.seccion (id, nombre) VALUES (4, 'Laboral');
 INSERT INTO alfime2.seccion (id, nombre) VALUES (5, 'Psicología');
 
 INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (1, 'Plan');
-INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (2, 'Informe');
-INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (3, 'Seguimiento');
+INSERT INTO alfime2.seccion_tipo (id, nombre) VALUES (2, 'Seguimiento');
 
 -- Password es "password"
 INSERT INTO alfime2.asociado (id, nombre_completo, password, usuario) VALUES (1, 'Juan Pérez', '{sha256}97cde38028ad898ebc02e690819fa220e88c62e0699403e94fff291cfffaf8410849f27605abcbc0', 'juanito');

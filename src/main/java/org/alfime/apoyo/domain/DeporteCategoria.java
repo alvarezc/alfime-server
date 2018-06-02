@@ -8,7 +8,7 @@ import java.util.List;
 public class DeporteCategoria implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Byte id;
+    private Short id;
 
     @Column(length = 50)
     private String nombre;
@@ -23,11 +23,11 @@ public class DeporteCategoria implements Serializable {
     )
     private List<Discapacidad> discapacidades;
 
-    public Byte getId() {
+    public Short getId() {
         return id;
     }
 
-    public void setId(Byte id) {
+    public void setId(Short id) {
         this.id = id;
     }
 

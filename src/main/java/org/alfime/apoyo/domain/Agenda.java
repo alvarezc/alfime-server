@@ -13,6 +13,9 @@ public class Agenda implements Serializable {
     @Column(nullable = false)
     private Date fecha;
 
+    @Column(columnDefinition = "text")
+    private String descripcion;
+
     @ManyToOne
     private AgendaEvento evento;
 
@@ -33,6 +36,14 @@ public class Agenda implements Serializable {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public AgendaEvento getEvento() {
