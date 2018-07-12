@@ -11,14 +11,13 @@ public class Asociado {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
 
-    @Column(length = 20)
-    private String usuario;
+    @Column(length = 20, name = "usuario")
+    private String username;
 
     @Column(length = 50)
     private String nombreCompleto;
 
     @Column(length = 100)
-    @JsonIgnore
     private String password;
 
     @Transient
@@ -38,12 +37,12 @@ public class Asociado {
         this.id = id;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getNombreCompleto() {
